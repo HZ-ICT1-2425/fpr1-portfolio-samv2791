@@ -7,31 +7,32 @@ use Illuminate\View\View;
 
 class PagesController extends Controller
 {
-    public function showBlog(): View {
+    public function showBlog(): View
+    {
         return view('blog');
     }
 
-    public function showBlogPage($id): View {
-        if($id > 0 && $id < 6) {
-        return view('blogPosts', ['id' => $id]);
+    public function showBlogPage($id): View
+    {
+        if ($id > 0 && $id < 6) {
+            return view('blogPosts', ['id' => $id]);
         } else {
             abort(404);
         }
     }
 
-    public function showDashboard(): View {
+    public function showDashboard(): View
+    {
         return view('dashboard');
     }
 
-    public function showFaq(): View {
-        return view('faq');
-    }
-
-    public function showIndex(): View {
+    public function showIndex(): View
+    {
         return view('index');
     }
 
-    public function showProfile(): View {
+    public function showProfile(): View
+    {
         return view('profile');
     }
 }
