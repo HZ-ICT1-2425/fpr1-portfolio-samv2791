@@ -4,7 +4,7 @@
         <li><a id="active" href="<?=route('profile')?>">Profile</a></li>
         <li><a href="<?=route('dashboard')?>">Dashboard</a></li>
         <li><a href="<?=route('faq.index')?>">FAQ</a></li>
-        <li><a href="<?=route('blog')?>">Blog</a></li>
+        <li><a href="<?=route('blog.index')?>">Blog</a></li>
     </x-slot:navbar>
     <img id="myprofileIMG1" src="{{asset('images/myprofileMe.jpg')}}" type="image/jpg" alt="Picture of me">
     <div>

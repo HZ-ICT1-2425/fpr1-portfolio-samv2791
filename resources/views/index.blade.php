@@ -4,7 +4,7 @@
         <li><a href="<?=route('profile')?>">Profile</a></li>
         <li><a href="<?=route('dashboard')?>">Dashboard</a></li>
         <li><a href="<?=route('faq.index')?>">FAQ</a></li>
-        <li><a href="<?=route('blog')?>">Blog</a></li>
+        <li><a href="<?=route('blog.index')?>">Blog</a></li>
     </x-slot:navbar>
     <div>
         <h1 id="titleHome">ICT to me</h1>
