@@ -34,5 +34,6 @@
         </div>
 
         <button type="submit" class="button has-background-success">Submit</button>
+        <a href="{{route('blog.index')}}" class="button has-background-danger">Cancel</a>
     </form>
 </x-main>

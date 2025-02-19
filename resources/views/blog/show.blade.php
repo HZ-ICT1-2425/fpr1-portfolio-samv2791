@@ -18,4 +18,25 @@
         @method('DELETE')
         <button type="submit" class="button has-background-danger">Delete</button>
     </form>
+
+    <br>
+    
+    @if (session('success'))
+        <div class="notification is-success">
+            <button class="delete"></button>
+            {{ session('success') }}
+        </div>
+    @endif
 </x-main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+            const $notification = $delete.parentNode;
+
+            $delete.addEventListener('click', () => {
+                $notification.parentNode.removeChild($notification);
+            });
+        });
+    });
+</script>

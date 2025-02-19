@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -29,9 +30,9 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'title' => 'required',
-            'slug' => 'required',
-            'body' => 'required'
+            'title' => 'required|min:10',
+            'slug' => 'required|min:10',
+            'body' => 'required|min:10'
         ]);
 
         Post::create($validated);
@@ -61,12 +62,14 @@ class PostController extends Controller
     public function update(Request $request, Post $blog)
     {
         $validated = $request->validate([
-            'title' => 'required',
-            'slug' => 'required',
-            'body' => 'required'
+            'title' => 'required|min:10',
+            'slug' => 'required|min:10',
+            'body' => 'required|min:10'
         ]);
 
         $blog->update($validated);
+
+        session()->flash('success', 'successfully updated');
 
         return redirect()->route('blog.show', ['blog' => $blog]);
     }

@@ -6,6 +6,7 @@
         <li><a href="<?=route('faq.index')?>">FAQ</a></li>
         <li><a id="active" href="<?=route('blog.index')?>">Blog</a></li>
     </x-slot:navbar>
+
     <div class="blogMain">
         <article id="blogHeader">
             <h1 style="margin-bottom: 55px;">Blog</h1>
