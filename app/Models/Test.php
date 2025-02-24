@@ -9,6 +9,9 @@ class Test extends Model
 {
     protected $fillable = ['course_id', 'name', 'weighing_factor', 'lowest_passing_grade', 'best_grade'];
 
+    /**
+     * @return BelongsTo
+     */
     public function course(): BelongsTo
     {
         return $this->belongsTo(Course::class);

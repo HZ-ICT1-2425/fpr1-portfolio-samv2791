@@ -9,6 +9,9 @@ class Course extends Model
 {
     protected $fillable = ['cu_code', 'name', 'credits', 'passed_at'];
 
+    /**
+     * @return HasMany
+     */
     public function tests(): HasMany
     {
         return $this->hasMany(Test::class);
