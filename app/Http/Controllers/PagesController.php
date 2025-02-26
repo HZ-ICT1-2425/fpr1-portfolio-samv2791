@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -33,7 +34,7 @@ class PagesController extends Controller
      */
     public function showDashboard(): View
     {
-        return view('dashboard');
+        return view('dashboard', ['courses' => Course::all()]);
     }
 
     /**
